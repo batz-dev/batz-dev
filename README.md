@@ -1,102 +1,104 @@
-<div align="center">
+# OFC Movies — Netflix-Style Android App (Jetpack Compose)
 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=1000&color=00D2FF&center=true&vCenter=true&random=false&width=620&lines=Hi%2C+I'm+Biswajit+%F0%9F%91%8B;Android+%26+Mobile+Systems+Engineer+%F0%9F%93%B1;Crafting+Apps+with+Jetpack+Compose+%26+M3+%E2%9C%A8;Building+Offline+AI+%26+Autonomous+Agents+%F0%9F%A4%96;Automating+Everything+with+CI%2FCD+%E2%9A%A1" alt="Typing SVG" />
-
-  <p align="center">
-    <a href="https://github.com/batz-dev">
-      <img src="https://komarev.com/ghpvc/?username=batz-dev&label=PROFILE+VIEWS&color=00d2ff&style=for-the-badge" alt="Profile Views" />
-    </a>
-    <a href="https://github.com/batz-dev?tab=followers">
-      <img src="https://img.shields.io/github/followers/batz-dev?label=Followers&style=for-the-badge&color=238636" alt="Followers" />
-    </a>
-    <img src="https://img.shields.io/badge/Focus-Android%20%7C%20Compose%20%7C%20AI-7F52FF?style=for-the-badge" alt="Focus" />
-  </p>
-
-  <p align="center">
-    <b>Passionate Mobile & Systems Engineer</b> crafting production-grade <b>Android</b> applications with <b>Jetpack Compose</b>, designing autonomous offline AI tools, and engineering automated CI/CD release pipelines.
-  </p>
-
-  <p align="center">
-    <a href="mailto:scaaa747@gmail.com"><img src="https://img.shields.io/badge/Email-scaaa747%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
-    <a href="https://github.com/batz-dev"><img src="https://img.shields.io/badge/GitHub-batz--dev-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-    <img src="https://img.shields.io/badge/Location-Assam%2C%20India-EA4335?style=flat-square&logo=google-maps&logoColor=white" alt="Location" />
-  </p>
-
-</div>
+A cinematic, modern movie streaming application built with **Kotlin** and **Jetpack Compose**, adhering strictly to a custom dark-theme design system, integrating directly with **MovieBox APIs** with client-side HMAC-MD5 request signing and token bootstrapping, and optimized to be **under 10 MB**.
 
 ---
 
-### 👨‍💻 About Me
+## 🎨 Design System
 
-- 📍 **Location**: Assam, India 🇮🇳
-- 📱 **Mobile & Android Architecture**: Building scalable, reactive apps with **Kotlin**, **Jetpack Compose**, and **Material 3**.
-- 🤖 **Offline AI & Autonomous Systems**: Developing offline voice assistants and on-device LLM workflows without recurring cloud API dependencies.
-- 🚀 **DevOps & Automated CI/CD**: Designing zero-friction GitHub Actions workflows for continuous compilation, testing, and release delivery.
-- 🛠️ **Systems & Infrastructure**: Managing Linux servers, Docker containers, reverse proxies, and game server hosting.
-
----
-
-### 🛠️ Tech Stack & Toolbox
-
-<div align="center">
-
-#### Languages & Core
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
-#### Mobile & Frontend
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
-![Material Design 3](https://img.shields.io/badge/Material%20Design%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
-
-#### DevOps, Cloud & Systems
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-</div>
+* **Theme:** Dark mode only, cinematic feel
+* **Background:** `#0A0A0F` (near-black)
+* **Surface/Card:** `#16161F`
+* **Surface Elevated:** `#22222E`
+* **Primary Accent:** `#E50914` (Netflix Deep Red) — Used strictly for CTAs, play buttons, active indicators, and badges
+* **Secondary Accent:** `#FFD700` (Gold) — For IMDb ratings and premium tags
+* **Typography:** Bold condensed headings (`letterSpacing = -0.6.sp`), clean readable body text
+* **Corner Radii:** `8dp` for movie posters/cards, `24dp` for pill-shaped buttons
+* **Spacing:** `16dp` base padding, `24dp` between sections
+* **Micro-interactions:** Interactive press-down scale animations (`0.95f`), smooth crossfades, shimmer image loading
 
 ---
 
-### ⭐ Featured Projects
+## 🚀 Direct MovieBox Integration
 
-| Project | Description | Tech Stack |
-| :--- | :--- | :--- |
-| 🎬 **[cinenova-android](https://github.com/batz-dev/cinenova-android)** | Material 3 movie & TV streaming app UI with automated CI/CD APK generation | `Jetpack Compose` `Material 3` `CI/CD` |
-| 🎵 **[bttune-android](https://github.com/batz-dev/bttune-android)** | High-performance audio & streaming client with Material 3 UI | `Kotlin` `Jetpack Compose` `ExoPlayer` |
-| 🎙️ **[siri-autonomous-assistant](https://github.com/batz-dev/siri-autonomous-assistant)** | Offline Siri-like autonomous Android assistant running local models | `Kotlin` `Jetpack Compose` `Offline AI` |
-| 🍿 **[ofc-movies-android](https://github.com/batz-dev/ofc-movies-android)** | Netflix/Prime-style modern streaming client for Android | `Android` `Compose` `ExoPlayer` |
-| 🎧 **[mus-flutter-player](https://github.com/batz-dev/mus-flutter-player)** | Modern music player app with dark aesthetic and sleek UI | `Flutter` `Dart` `Material 3` |
-| 🌐 **[stream-web-player](https://github.com/batz-dev/stream-web-player)** | Interactive web media & video player interface | `Python` `JavaScript` `Web` |
-
----
-
-### 📊 GitHub Activity & Statistics
-
-<div align="center">
-  <a href="https://github.com/batz-dev">
-    <img src="https://github-readme-stats.vercel.app/api?username=batz-dev&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d2ff&icon_color=00d2ff" alt="GitHub Stats" width="48%" />
-  </a>
-  <a href="https://github.com/batz-dev">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=batz-dev&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00d2ff" alt="Top Languages" width="48%" />
-  </a>
-
-  <br />
-
-  <a href="https://github.com/batz-dev">
-    <img src="https://streak-stats.demolab.com/?user=batz-dev&theme=tokyonight&hide_border=true&background=0d1117&ring=00d2ff&fire=00d2ff&currStreakLabel=00d2ff" alt="GitHub Streak" width="97%" />
-  </a>
-</div>
+The app connects **directly** to MovieBox upstream services without requiring any intermediate backend server:
+* **Gateway Endpoint:** `https://api6.aoneroom.com` (with fallback to `api5.aoneroom.com`)
+* **Security & Signing Layer (`MovieBoxSigner.kt` & `MovieBoxAuthInterceptor.kt`):**
+  - Canonical request generation with alphabetically sorted query parameters.
+  - Client-side HMAC-MD5 cryptographic signature (`x-tr-signature`).
+  - Dynamic timestamp-hashed token (`X-Client-Token`).
+  - Automatic guest token bootstrapping via `/wefeed-mobile-bff/tab-operating` with transparent 401 retry handling.
+* **Direct Streaming (`VideoPlayerScreen.kt`):**
+  - CloudFront signed cookie parser (`CloudFront-Policy`) resolving `.mpd` adaptive DASH streams from `sacdn.hakunaymatata.com`.
+  - Media3 ExoPlayer with `DefaultHttpDataSource.Factory` injecting signed cookies and headers for direct, smooth 1080p/720p/480p playback.
+  - Fallback to direct MP4/HLS stream URLs.
 
 ---
 
-<div align="center">
-  <sub>Crafted with passion by <b><a href="https://github.com/batz-dev">Biswajit (batz-dev)</a></b></sub>
-</div>
+## 📱 Features & Screens
+
+1. **Splash Screen (`SplashScreen.kt`):**
+   - Cinematic `#0A0A0F` backdrop with pulsing OFC Movies logo.
+   - Transparent session bootstrap in the background.
+   - Smooth transition into Onboarding or Main screen.
+2. **Onboarding Screen (`OnboardingScreen.kt`):**
+   - 3-card horizontal carousel showcasing Blockbuster Entertainment, Ultra HD 4K DASH Streaming, and Zero Signup Access.
+   - Dot indicator, Skip button, and Deep Red "Get Started" pill button.
+3. **Home Screen (`HomeScreen.kt`):**
+   - Floating top branding header with search & profile buttons.
+   - Hero banner carousel with auto-rotation, Play and Details pill buttons.
+   - Category filter pills ("All", "Action", "Drama", "Sci-Fi", "Comedy", "Animation", "Thriller").
+   - Continue Watching row with real progress bar overlay and play icon.
+   - Top 10 Today row with massive Netflix-style ranking numbers (`1`, `2`, `3`...).
+   - Curated horizontal scrolling rows from official MovieBox feeds.
+4. **Movie Detail Screen (`MovieDetailScreen.kt`):**
+   - Parallax poster backdrop header fading seamlessly into `#0A0A0F`.
+   - Title, Gold rating badge (`#FFD700`), release year, 4K Ultra HD badge, and genres.
+   - Large Red "Play Now" pill button and "My List" toggle.
+   - Multi-audio dub selector (Hindi, English, Tamil, Telugu, Spanish, etc.).
+   - Season & Episode selector pills for TV series.
+   - Storyline description with smooth expand/collapse animation.
+   - Cast & Crew row with avatars and role names.
+   - "More Like This" recommendations carousel.
+5. **Video Player Screen (`VideoPlayerScreen.kt`):**
+   - Built on Media3 ExoPlayer with native DASH playback and signed CloudFront cookie injector.
+   - Auto-hiding custom controls overlay (3-second idle timer, tap to toggle).
+   - Top bar: Back navigation, title, season/episode indicator, and stream quality pill.
+   - Center: Rewind 10s, Play/Pause circle button, and Forward 10s.
+   - Bottom bar: Current position, deep red scrubber slider, total duration, and stream quality dialog (1080P, 720P, 480P).
+6. **Search Screen (`SearchScreen.kt`):**
+   - Debounced search bar (400ms) with instant clear action.
+   - Category exploration chips and Recent Searches with "Clear All".
+   - 3-column responsive poster grid with empty state suggestions.
+7. **My Library (`MyListScreen.kt`):**
+   - Watchlist and History tabs with 3-column movie grid.
+8. **Downloads Manager (`DownloadsScreen.kt`):**
+   - Device storage breakdown bar (used vs free space).
+   - Downloaded media list with quality tags and offline playback launcher.
+9. **Profile & Settings (`ProfileScreen.kt`):**
+   - Streaming quality preferences dialog.
+   - Image & Stream cache cleaner (clears Coil disk & memory caches).
+   - App version and direct MovieBox gateway status.
+10. **Category Explorer (`CategoryScreen.kt`):**
+    - Deep-filtered 3-column movie grid for specific genres.
+
+---
+
+## ⚡ Sub-10MB Size Optimization
+
+* **R8 Minification & Code Shrinking:** `isMinifyEnabled = true` strips all unused classes, methods, and SDK code.
+* **Resource Shrinking:** `isShrinkResources = true` removes all unreferenced drawables and layouts.
+* **Locale Stripping:** `resourceConfigurations += listOf("en")` eliminates bloated multi-language string tables.
+* **Lean Icons:** Standard lightweight vector drawables, eliminating the 30MB `material-icons-extended` dependency.
+* **ProGuard Optimization:** Custom `proguard-rules.pro` tailored for Retrofit, OkHttp, Gson, Coil, and Media3 ExoPlayer.
+
+---
+
+## ⚙️ Cloud CI / GitHub Actions APK Build
+
+The application is built automatically in the cloud via GitHub Actions. **No local compilation is required.**
+
+1. On every commit pushed to `main`, GitHub Actions spins up an Ubuntu environment with JDK 17 and Android SDK 34.
+2. The workflow executes `./gradlew assembleDebug --stacktrace`.
+3. The workflow verifies that the compiled APK size is strictly **under 10 MB**.
+4. The compiled APK is uploaded as a downloadable artifact: **`OFC-Movies-Android-APK`** under the Actions tab.
